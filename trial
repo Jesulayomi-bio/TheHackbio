@@ -1,0 +1,23 @@
+#Hamming Distance
+slack_username = ['j','e','s','l','a','y','o','m','i','a','t']
+x_username = ['t','h','e','j','e','s','u','l','a','y','o','m','i']
+
+for su, xu in zip(slack_username, x_username):
+    if su != xu:
+        print(f"Comparison: {su} is not {xu}")
+
+
+
+#Time to reach Carrying capacity
+  #formula
+
+def time_to_reach_carrying_capacity(N, I, r, K):
+   time_to_reach_k = 1 + ((r*N*(1-N))/(K*(N-I)))
+   return time_to_reach_k
+
+initial_population_size = 50
+current_population_size = 400
+growth_rate = 1.09
+carrying_capacity = 80
+time_of_k = time_to_reach_carrying_capacity(current_population_size,initial_population_size, growth_rate, carrying_capacity)
+print(f'Time to reach carying capacity of 80%:{time_of_k:.2f}years')
